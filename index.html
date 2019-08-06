@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>index [2.0 version]</title>
+	<title>index</title>
 	<link rel="stylesheet" href="./index2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./index2/css/main.css">
 </head>
@@ -43,9 +43,6 @@
 		</div>
 	</div>
 	<div class="modal show" >
-		<div align="right">
-			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=2887238275&auto=1&height=90"></iframe>
-		</div>
 		<div style="top:30%;">
 		<div class="modal-dialog" style="opacity: .9">
 			<div class="modal-content" style="opacity:.85">
@@ -72,10 +69,6 @@
 	<script type="text/javascript" src="./index2/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./index2/js/count-time.js"></script>
 	<script type="text/javascript" src="./index2/js/fairyDustCursor.js"></script>
-	<script type="text/javascript">
-	WIDGET = {FID: '8AsgdPWHhY'}
-	</script>
-	<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
 	<script>
 		$(function() {
         //起始日期
@@ -83,17 +76,17 @@
         var days = $('#day').text();
 
         if (parseInt(days / 365) != 0) {
-        	$(document).attr("title", "在一起" + parseInt(days / 365) + "年,感谢相知。");
+        	$(document).attr("title", "感谢相知。");
         } else if (parseInt(days / 30) != 0) {
-        	$(document).attr("title", "在一起" + parseInt(days / 30) + "个月,感谢相遇。");
+        	$(document).attr("title", "感谢相遇。");
         } else
-        $(document).attr("title", "在一起" + days + "天,感谢相识。");
+        $(document).attr("title", "感谢相识。");
 
         //设置每一张图片对应的文字
         var says = new Array(
         	"「 一路相伴 ♪ 感谢有你 」",
-        	"迪士尼 ♪ 雨下的长椅...",
-        	"外滩 ♪ 直播：把他俩推下去。",
+        	"迪士尼 ♪ ",
+        	"外滩 ♪ ",
         	"乌镇 ♪ ",
         	"龙井茶园 ♪ ",
         	"宏村 ♪ ",
@@ -138,7 +131,7 @@
         		$('#say').fadeToggle();
         		$('#carousel').carousel('next');
                 //预加载下  一张图片
-    	    	image.src = imgs[index].src;
+    	    	image.src = "https://open.saintic.com/api/bingPic/";
     	    	test.push(image);
             }, rate);
         }();
